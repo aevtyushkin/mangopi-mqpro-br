@@ -33,6 +33,11 @@ apt-get install -y build-essential unzip rsync bc libssl-dev
 ```
 
 - Download this project and navigate to project directory
+```
+git clone --recursive https://github.com/aevtyushkin/mangopi-mqpro-br.git
+cd mangopi-mqpro-br
+```
+
 - Init environment
 ```
 source br-external/envsetup.sh
