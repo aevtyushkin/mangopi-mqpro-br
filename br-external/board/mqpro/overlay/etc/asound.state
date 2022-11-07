@@ -1,0 +1,265 @@
+state.sun20icodec {
+	control.1 {
+		iface MIXER
+		name 'DAC Playback Volume'
+		value.0 160
+		value.1 160
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 192'
+			dbmin -9999999
+			dbmax 2400
+			dbvalue.0 0
+			dbvalue.1 0
+		}
+	}
+	control.2 {
+		iface MIXER
+		name 'ADC3 Capture Volume'
+		value 160
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 192'
+			dbmin -9999999
+			dbmax 2400
+			dbvalue.0 0
+		}
+	}
+	control.3 {
+		iface MIXER
+		name 'ADC2 Capture Volume'
+		value 160
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 192'
+			dbmin -9999999
+			dbmax 2400
+			dbvalue.0 0
+		}
+	}
+	control.4 {
+		iface MIXER
+		name 'ADC1 Capture Volume'
+		value 160
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 192'
+			dbmin -9999999
+			dbmax 2400
+			dbvalue.0 0
+		}
+	}
+	control.5 {
+		iface MIXER
+		name 'FM Capture Volume'
+		value.0 0
+		value.1 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 1'
+			dbmin 0
+			dbmax 600
+			dbvalue.0 0
+			dbvalue.1 0
+		}
+	}
+	control.6 {
+		iface MIXER
+		name 'Line In Capture Volume'
+		value.0 0
+		value.1 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 2
+			range '0 - 1'
+			dbmin 0
+			dbmax 600
+			dbvalue.0 0
+			dbvalue.1 0
+		}
+	}
+	control.7 {
+		iface MIXER
+		name 'Line Out Mode Playback Enum'
+		value.0 Single-Ended
+		value.1 Single-Ended
+		comment {
+			access 'read write'
+			type ENUMERATED
+			count 2
+			item.0 Single-Ended
+			item.1 Differential
+		}
+	}
+	control.8 {
+		iface MIXER
+		name 'Line Out Playback Volume'
+		value 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 31'
+			dbmin -9999999
+			dbmax 0
+			dbvalue.0 -9999999
+		}
+	}
+	control.9 {
+		iface MIXER
+		name 'Headphone Playback Volume'
+		value 5
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 7'
+			dbmin -4200
+			dbmax 0
+			dbvalue.0 -1200
+		}
+	}
+	control.10 {
+		iface MIXER
+		name 'Line Out Playback Switch'
+		value.0 true
+		value.1 true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 2
+		}
+	}
+	control.11 {
+		iface MIXER
+		name 'Headphone Playback Switch'
+		value true
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.12 {
+		iface MIXER
+		name 'Mic1 Capture Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.13 {
+		iface MIXER
+		name 'FM Capture Switch'
+		value.0 false
+		value.1 false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 2
+		}
+	}
+	control.14 {
+		iface MIXER
+		name 'Line In Capture Switch'
+		value.0 false
+		value.1 false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 2
+		}
+	}
+	control.15 {
+		iface MIXER
+		name 'Mic2 Capture Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.16 {
+		iface MIXER
+		name 'Mic3 Capture Switch'
+		value false
+		comment {
+			access 'read write'
+			type BOOLEAN
+			count 1
+		}
+	}
+	control.17 {
+		iface MIXER
+		name 'Mic1 Capture Volume'
+		value 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 31'
+			dbmin 500
+			dbmax 3600
+			dbvalue.0 500
+		}
+	}
+	control.18 {
+		iface MIXER
+		name 'Mic2 Capture Volume'
+		value 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 31'
+			dbmin 500
+			dbmax 3600
+			dbvalue.0 500
+		}
+	}
+	control.19 {
+		iface MIXER
+		name 'Mic3 Capture Volume'
+		value 0
+		comment {
+			access 'read write'
+			type INTEGER
+			count 1
+			range '0 - 31'
+			dbmin 500
+			dbmax 3600
+			dbvalue.0 500
+		}
+	}
+	control.20 {
+		iface MIXER
+		name 'Soft Volume Master'
+		value.0 255
+		value.1 255
+		comment {
+			access 'read write user'
+			type INTEGER
+			count 2
+			range '0 - 255'
+			tlv '0000000100000008ffffec1400000014'
+			dbmin -5100
+			dbmax 0
+			dbvalue.0 0
+			dbvalue.1 0
+		}
+	}
+}
