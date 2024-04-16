@@ -1,0 +1,9 @@
+--- a/arch/riscv/dts/Makefile
++++ b/arch/riscv/dts/Makefile
+@@ -16,6 +16,7 @@
+ dtb-$(CONFIG_TARGET_SUN20I_D1) += sun20i-d1-lichee-rv.dtb
+ dtb-$(CONFIG_TARGET_SUN20I_D1) += sun20i-d1-mangopi-mq-pro.dtb
+ dtb-$(CONFIG_TARGET_SUN20I_D1) += sun20i-d1-nezha.dtb
++dtb-$(CONFIG_TARGET_SUN20I_D1) += board.dtb
+
+ include $(srctree)/scripts/Makefile.dts

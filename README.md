@@ -10,7 +10,7 @@ The task is to make a working distribution(boilerplate) to quickly prototype dev
 
 * GCC 12.2
 * Binutils 2.39
-* Uboot, OpenSBI and Kernel 5.19 with patches from smaeul
+* Uboot, OpenSBI and Kernel 6.1 with patches from smaeul
 * Busybox init
 * Bluetooth
 * Wireless LAN
@@ -80,7 +80,24 @@ All board-specific files are located at "br-external" directory, you can easily 
 
 ## After first boot
 
-Edit file /etc/wpa_supplicant.conf to setup your wireless network and reboot.
+### Set root password
+
+```
+passwd root
+```
+
+### Connect to WLAN
+
+```
+nmcli -t dev wifi connect "network-ssid" password "network-password"
+```
+
+### Permit root login via ssh (don't use in production)
+
+```
+echo "PermitRootLogin yes" > /etc/ssh/sshd_config
+```
+
 
 ## Testing
 
@@ -101,9 +118,9 @@ This will show nearby devices
 ### Testing WLAN
 
 ```
-ifconfig
+nmcli -t
 ```
-There should be *wlan0* interface and IP address if you specified correct wlan settings at /etc/wpa_supplicant.conf
+There should be *wlan0* interface and IP address if you successfully connected to wireless network
 
 ## Known issues
 
