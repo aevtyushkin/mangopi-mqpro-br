@@ -206,6 +206,11 @@
             "", "", "", "",
             "", "", "", "";
 
+        // I2C0
+        i2c0_pg12_pins: i2c0-pg12-pins {
+            pins = "PG12", "PG13";
+            function = "i2c0";
+        };
 };
 
 &uart0 {
@@ -243,4 +248,14 @@
                   "Headphone Jack", "HPOUTR";
         widgets = "Headphone", "Headphone Jack";
         status = "okay";
+};
+
+&i2c0 {
+        #address-cells = <1>;
+        #size-cells = <0>;
+        pinctrl-0 = <&i2c0_pg12_pins>;
+        pinctrl-names = "default";
+        status = "okay";
+
+        // Place I2C devices here
 };
